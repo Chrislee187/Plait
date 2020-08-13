@@ -19,7 +19,9 @@ channel-id = byte-value (0-255)
 
 Images may be in different formats BUT must all be of the same width and height.
 
-Image formats supported, are those supported by the [C# System.Drawing.Bitmap](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.bitmap?view=dotnet-plat-ext-3.1) class.
+Image formats supported, are any less than or equal 32bpp (bits-per-pixel) formats supported by the [C# System.Drawing.Bitmap](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.bitmap?view=dotnet-plat-ext-3.1) class.
+
+Output format will always be 32bpp.
 
 ## `channel-id`
 
@@ -27,10 +29,20 @@ Image formats supported, are those supported by the [C# System.Drawing.Bitmap](h
 
 Valid `channelId`'s are `a, r, g, b` representing the Alpha, Red, Green and Blue values of a given pixel.
 
-i.e. `r2` would use the `red` channel from the second `image-file` supplied
-
 `image-file-index` indexes are one-based. 
 
 ## `output-filename`
 
 If not supplied, `output-filename` will default to the filename of the first image supplied with `-plaited` appended. i.e. if the first file is named `image.png` the output file will be named `image-plaited.png`.
+
+## Examples
+
+`PLAIT.EXE img1.png img2.png --red r2`
+
+Output image will contain the blue, green and alpha channels from `img1.png` and the `red` channel from the `img2.png`
+
+`PLAIT.EXE img1.png --alpha 255`
+
+Output image will contain the red, green and blue channels from `img1.png`, the alpha channel will be set to 255.
+
+

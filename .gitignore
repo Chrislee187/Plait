@@ -71,3 +71,5 @@ packages/
 /src/chess.games.db/chessgames.db
 /src/chess.games.db.pgnimporter/chessgames.db
 *.sqlite-shm
+
+./SampleImages/plaited.png

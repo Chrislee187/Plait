@@ -105,7 +105,7 @@ namespace Plait
         {
             var width = bitmaps[0].Width;
             var height = bitmaps[0].Height;
-            var output = new Bitmap(width, height, PixelFormat.Format24bppRgb);
+            var output = new Bitmap(width, height, PixelFormat.Format32bppRgb);
 
             for (var y = 0; y <= width - 1; y++)
             {
