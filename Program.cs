@@ -16,6 +16,7 @@ namespace Plait
     {
         static void Main(string[] args)
         {
+            // TODO: Show usage
             var clap = new SimpleParser(args);
             var inputs = clap.Arguments;
             var options = GetOptions(clap);

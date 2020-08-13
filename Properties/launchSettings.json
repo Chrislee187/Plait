@@ -1,8 +1,7 @@
 {
   "profiles": {
     "PlaitPNG": {
-      "commandName": "Project",
-      "commandLineArgs": "D:\\Src\\PlaitPNG\\PlaitPNG.\\PlaitPng\\SampleImages\\Red.png D:\\Src\\PlaitPNG\\PlaitPNG.\\PlaitPng\\SampleImages\\Blue.png --blue 255"
+      "commandName": "Project"
     }
   }
 }
